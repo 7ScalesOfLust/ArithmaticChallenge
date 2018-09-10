@@ -11,8 +11,12 @@
         android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/TextView_Greeting"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dagothUr"
         app:layout_constraintTop_toBottomOf="@+id/subtract"
         app:srcCompat="@drawable/button_divide" />
 
@@ -20,10 +24,13 @@
         android:id="@+id/multiply"
         android:layout_width="112dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/divide"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/divide"
+        app:layout_constraintEnd_toStartOf="@+id/dagothUr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add"
         app:srcCompat="@drawable/button_multiply" />
@@ -32,25 +39,35 @@
         android:id="@+id/subtract"
         android:layout_width="112dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/TextView_Greeting"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/add"
-        app:srcCompat="@drawable/button_subtract"
-        tools:layout_editor_absoluteY="64dp" />
+        app:layout_constraintStart_toEndOf="@+id/dagothUr"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/button_subtract" />
 
     <ImageView
         android:id="@+id/add"
         android:layout_width="112dp"
         android:layout_height="109dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="@+id/dagothUr"
+        app:layout_constraintEnd_toStartOf="@+id/dagothUr"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/button_add"
-        tools:layout_editor_absoluteY="64dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/button_add" />
 
     <TextView
         android:id="@+id/TextView_Greeting"
@@ -88,10 +105,17 @@
         android:id="@+id/radioGroup"
         android:layout_width="125dp"
         android:layout_height="214dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/TextView_Greeting"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="269dp">
+        app:layout_constraintTop_toBottomOf="@+id/TextView_Greeting"
+        app:layout_constraintVertical_bias="0.714">
 
         <RadioButton
             android:id="@+id/radioButton_Level1"
@@ -144,7 +168,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/Choice 1"
+                android:id="@+id/Choice_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 1"
@@ -152,7 +176,7 @@
                 tools:layout_editor_absoluteY="351dp" />
 
             <TextView
-                android:id="@+id/Choice 2"
+                android:id="@+id/Choice_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 2"
@@ -160,7 +184,7 @@
                 tools:layout_editor_absoluteY="307dp" />
 
             <TextView
-                android:id="@+id/Choice 3"
+                android:id="@+id/Choice_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 3"
@@ -168,7 +192,7 @@
                 tools:layout_editor_absoluteY="303dp" />
 
             <TextView
-                android:id="@+id/Choice 4"
+                android:id="@+id/Choice_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 4"
@@ -176,7 +200,7 @@
                 tools:layout_editor_absoluteY="351dp" />
 
             <TextView
-                android:id="@+id/Choice 5"
+                android:id="@+id/Choice_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 5"
@@ -184,7 +208,7 @@
                 tools:layout_editor_absoluteY="307dp" />
 
             <TextView
-                android:id="@+id/Choice 6"
+                android:id="@+id/Choice_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 6"
@@ -192,7 +216,7 @@
                 tools:layout_editor_absoluteY="303dp" />
 
             <TextView
-                android:id="@+id/Choice 7"
+                android:id="@+id/Choice_7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 7"
@@ -200,7 +224,7 @@
                 tools:layout_editor_absoluteY="351dp" />
 
             <TextView
-                android:id="@+id/Choice 8"
+                android:id="@+id/Choice_8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 8"
@@ -208,7 +232,7 @@
                 tools:layout_editor_absoluteY="307dp" />
 
             <TextView
-                android:id="@+id/Choice 9"
+                android:id="@+id/Choice_9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 9"
@@ -216,7 +240,7 @@
                 tools:layout_editor_absoluteY="303dp" />
 
             <TextView
-                android:id="@+id/Choice 10"
+                android:id="@+id/Choice_10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 10"
@@ -224,7 +248,7 @@
                 tools:layout_editor_absoluteY="351dp" />
 
             <TextView
-                android:id="@+id/Choice 11"
+                android:id="@+id/Choice_11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 11"
@@ -232,7 +256,7 @@
                 tools:layout_editor_absoluteY="307dp" />
 
             <TextView
-                android:id="@+id/Choice 12"
+                android:id="@+id/Choice_12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choice 12"
