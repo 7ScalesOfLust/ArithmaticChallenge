@@ -3,6 +3,7 @@ package com.example.wb00188.arithmaticchallenge;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Button;
 import android.content.Intent;
@@ -11,7 +12,7 @@ import android.content.Intent;
  * Description: This is the controller of the main activity to react
  *              user activities.
  *
- * @author Wil BAuer
+ * @author Wil Bauer
  * @version September 8, 2018 5:30 pm
  ***********************************************************************/
 
