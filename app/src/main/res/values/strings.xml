@@ -3,8 +3,8 @@
     <string name="answer1">answer1</string>
     <string name="answer2">answer2</string>
     <string name="answer3">answer3</string>
-    <string name="answer4">answer4</string>
-    <string name="equation">equation</string>
+    <string name="equation">10 o 20</string>
     <string name="score">Score:</string>
-    <string name="highscore">Highscore:</string>
+    <string name="HighScore">Highscore:</string>
+    <string name="buttonMenu">Menu</string>
 </resources>

@@ -7,28 +7,29 @@
     tools:context=".GameActivity">
 
     <TextView
-        android:id="@+id/equation"
-        android:layout_width="354dp"
-        android:layout_height="162dp"
-        android:layout_marginBottom="76dp"
+        android:id="@+id/textViewQuestion"
+        android:layout_width="343dp"
+        android:layout_height="131dp"
+        android:layout_marginBottom="1dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="60dp"
         android:layout_weight="1"
         android:text="@string/equation"
-        app:layout_constraintBottom_toTopOf="@+id/answers"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBanner"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="231dp"
-        android:layout_height="32dp"
+        android:layout_width="229dp"
+        android:layout_height="27dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -37,7 +38,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.713"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -45,18 +46,17 @@
     <LinearLayout
         android:id="@+id/answers"
         android:layout_width="344dp"
-        android:layout_height="200dp"
+        android:layout_height="165dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="18dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/bottomBanner">
 
         <Button
             android:id="@+id/answer1"
@@ -76,17 +76,12 @@
             android:layout_height="wrap_content"
             android:text="@string/answer3" />
 
-        <Button
-            android:id="@+id/answer4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/answer4" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/score"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
+        android:id="@+id/textViewScore"
+        android:layout_width="126dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="11dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="40dp"
@@ -94,33 +89,33 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:text="@string/score"
-        app:layout_constraintBottom_toTopOf="@+id/equation"
+        app:layout_constraintBottom_toTopOf="@+id/textViewQuestion"
         app:layout_constraintEnd_toEndOf="@+id/progressBar"
-        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/highScore"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
+        android:id="@+id/textViewHighScore"
+        android:layout_width="126dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/highscore"
-        app:layout_constraintBottom_toBottomOf="@+id/score"
+        android:text="@string/HighScore"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewScore"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
-        app:layout_constraintStart_toEndOf="@+id/score"
-        app:layout_constraintTop_toTopOf="@+id/score"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toEndOf="@+id/textViewScore"
+        app:layout_constraintTop_toTopOf="@+id/textViewScore"
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
         android:id="@+id/bottomBanner"
-        android:layout_width="362dp"
+        android:layout_width="400dp"
         android:layout_height="64dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -132,7 +127,7 @@
         app:layout_constraintBottom_toTopOf="@+id/answers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/equation">
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion">
 
         <ImageView
             android:id="@+id/imageView18"
@@ -171,35 +166,38 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/heart1"
-        android:layout_width="48dp"
-        android:layout_height="41dp"
+        android:id="@+id/heart2"
+        android:layout_width="50dp"
+        android:layout_height="43dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="184dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/score"
-        app:layout_constraintEnd_toStartOf="@+id/progressBar"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="184dp"
+        app:layout_constraintBottom_toTopOf="@+id/answers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonMenu"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/heart_stone" />
 
-    <ImageView
-        android:id="@+id/heart2"
-        android:layout_width="48dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+    <Button
+        android:id="@+id/buttonMenu"
+        android:layout_width="75dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="15dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/highScore"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        android:text="@string/buttonMenu"
+        app:layout_constraintBottom_toTopOf="@+id/textViewScore"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/heart_stone" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
