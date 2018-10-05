@@ -7,4 +7,8 @@
     <string name="score">Score:</string>
     <string name="HighScore">Highscore:</string>
     <string name="buttonMenu">Menu</string>
+    <string name="correct_toast">Correct</string>
+    <string name="incorrect_toast">Fool</string>
+    <string name="win_text">oWo</string>
+    <string name="next_button">Next</string>
 </resources>

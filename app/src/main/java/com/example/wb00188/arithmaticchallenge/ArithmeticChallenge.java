@@ -9,6 +9,10 @@ public abstract class ArithmeticChallenge {
     String mQuestionText;
     String text;
     String[] mChoice = new String[3];
+    int mAnswer;
+    int mScore;
+    int mHighScore;
+    int mProgress;
 
 
     public ArithmeticChallenge(int TOTAL_LEVELS, int TURNS_PER_LEVEL){
@@ -39,6 +43,20 @@ public abstract class ArithmeticChallenge {
         this.text = txt;
     }
 
+    protected void setScore(boolean rOw){
+        long time = System.currentTimeMillis() - mStartTime;
+        int inScore = (int)(100 - time/100);
+        int score = (inScore <= 0) ? 0 : inScore;
+        mScore += (rOw) ? score : 0;
+    }
+
+    protected void setProgress() {
+        mProgress += 10;
+    }
+
+    protected void setHighScore(int highScore){
+        mHighScore = highScore;
+    }
     protected String getQuestionText(){
         return mQuestionText;
     }
@@ -47,13 +65,25 @@ public abstract class ArithmeticChallenge {
         return (mChoice[i]);
     }
 
+    protected int getScore() {
+        return mScore;
+    }
+
+    protected int getProgress(){
+        return mProgress;
+    }
+
+    protected int getHighScore(){
+        return mHighScore;
+    }
+
     /******************************************************
      * Concrete Classes
      ******************************************************/
 
     protected boolean isCorrect(int choice){
-        // to be implemented
-        return true;
+        boolean isCorrect = (choice == mAnswer) ? true : false;
+        return isCorrect;
     }
 
 
@@ -65,21 +95,25 @@ public abstract class ArithmeticChallenge {
                 mChoice[0] = " " + choices[1] + " ";
                 mChoice[1] = " " + choices[2] + " ";
                 mChoice[2] = " " + choices[0] + " ";
+                mAnswer = 2;
                 break;
 
             case 1:
                 mChoice[0] = " " + choices[2] + " ";
                 mChoice[1] = " " + choices[0] + " ";
                 mChoice[2] = " " + choices[1] + " ";
+                mAnswer = 1;
                 break;
 
             case 2:
                 mChoice[0] = " " + choices[0] + " ";
                 mChoice[1] = " " + choices[1] + " ";
                 mChoice[2] = " " + choices[2] + " ";
+                mAnswer = 0;
                 break;
 
             default:
+                mAnswer = 0;
                 break;
         }
     }
