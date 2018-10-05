@@ -18,7 +18,9 @@ public class Division extends ArithmeticChallenge {
         int[] choices = new int[3];
 
         for(int i = 0; i < choices.length; i++)
+            do {
                 choices[i] = (int) (13 * (Math.random())) / (int) (13 * (Math.random()));
+            } while (choices[i] == mNum1 / mNum2);
 
         choices[0] = mNum1 / mNum2;
         return choices;
