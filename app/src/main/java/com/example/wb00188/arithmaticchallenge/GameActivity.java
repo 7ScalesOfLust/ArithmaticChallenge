@@ -96,7 +96,7 @@ public class GameActivity extends AppCompatActivity {
     private void setScoreTextAndProgressBar(boolean isCorrect){
         int messageResID = (isCorrect) ? R.string.correct_toast : R.string.incorrect_toast;
         Toast correct = Toast.makeText(GameActivity.this,messageResID,Toast.LENGTH_SHORT);
-        correct.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 1080);
+        correct.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 1075);
         correct.show();
         game.setScore(isCorrect);
         String scoreText = "Score: " + Integer.toString(game.getScore());
